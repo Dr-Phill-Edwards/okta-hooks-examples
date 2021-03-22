@@ -1,0 +1,6 @@
+#! /bin/bash
+
+curl -i localhost:8000
+curl -i -H 'x-okta-verification-challenge: The challenge' localhost:8000
+curl -i -H "Content-Type: application/json" -d '{"event":"UserLogin"}' localhost:8000
+
